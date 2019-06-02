@@ -1,0 +1,17 @@
+{
+  "name": "rc-threejs",
+  "version": "1.0.0",
+  "description": "`$ sh ./bin/build.sh` takes all sketches in `js/sketches` and then populates html files to display the three.js sketch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sh ./bin/build.sh",
+    "dev": "onchange * -e 'js/sketches/*' -- npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "onchange": "^6.0.0"
+  }
+}
