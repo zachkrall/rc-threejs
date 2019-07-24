@@ -5,13 +5,30 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sh ./bin/build.sh",
-    "dev": "onchange * -e 'js/sketches/*' -- npm run build"
+    "dev": "webpack-dev-server --history-api-fallback",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachkrall/rc-threejs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zachkrall/rc-threejs/issues"
+  },
+  "homepage": "https://github.com/zachkrall/rc-threejs#readme",
   "devDependencies": {
-    "onchange": "^6.0.0"
+    "@babel/core": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.37.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "three": "^0.106.2"
   }
 }
